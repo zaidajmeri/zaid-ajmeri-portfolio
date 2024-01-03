@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Color Switcher Game</title>
+    <style>
+        body {
+            transition: background-color 0.5s;
+        }
+    
+        .canvas {
+            text-align: center;
+            margin-top: 15%;
+        }
+    
+        h1 {
+            color: #333;
+        }
+    
+        .button {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            cursor: pointer;
+            border: 2px solid #fff;
+            transition: transform 0.2s;
+        }
+    
+        .button:hover {
+            transform: scale(1.1);
+        }
+    
+        #Crimson {
+            background-color: Crimson;
+        }
+    
+        #Navy {
+            background-color: Navy;
+        }
+    
+        #greenyellow {
+            background-color: greenyellow;
+        }
+    
+        #Indigo {
+            background-color: Indigo;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="canvas">
+        <h1>Color Switcher Game</h1>
+        <span class="button" id="Crimson"></span>
+        <span class="button" id="Navy"></span>
+        <span class="button" id="greenyellow"> </span>
+        <span class="button" id="Indigo"></span>
+
+        <h2>Click on any color of above
+            <span>To Change background Color of this Page</span>
+        </h2>
+    </div>
+    <script>
+        var buttons = document.querySelectorAll('.button');
+        //console.log(button);
+        var body = document.body;
+
+        buttons.forEach(function (button){
+            console.log(buttons);
+            button.addEventListener('click', function(e){
+                console.log(e);
+                console.log(e.target);
+                if(e.target.id === 'Crimson'){
+                    body.style.backgroundColor = e.target.id;
+                }
+                if(e.target.id === 'Navy'){
+                    body.style.backgroundColor = e.target.id;
+                }
+                if(e.target.id === 'greenyellow'){
+                    body.style.backgroundColor = e.target.id;
+                }
+                if(e.target.id === 'Indigo'){
+                    body.style.backgroundColor = e.target.id;   
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
